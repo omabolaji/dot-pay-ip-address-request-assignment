@@ -18,9 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -28,6 +26,7 @@ import java.util.*;
 
 @Service @RequiredArgsConstructor @Slf4j
 public class PublicService {
+
 
     private static final String COMMA_DELIMITER = "|";
     private final UserAccessLogRepository userAccessLogRepository;
@@ -42,6 +41,7 @@ public class PublicService {
             return false;
         return true;
     }
+
 
     private void pushDataToDb(String file){
         try {
